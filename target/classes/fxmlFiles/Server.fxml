@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="ChangeDoctorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.ServerController">
+   <children>
+      <MenuBar fx:id="MainMenuBar" layoutX="-9.0" layoutY="2.0" prefHeight="25.0" prefWidth="609.0">
+        <menus>
+          <Menu fx:id="QeryMenuID" mnemonicParsing="false" text="Настройки">
+            <items>
+                  <MenuItem fx:id="AccountMenuItem" mnemonicParsing="false" text="Аккаунт" />
+            </items>
+          </Menu>
+          <Menu fx:id="OptionsMenuId" mnemonicParsing="false" text="Сервис">
+            <items>
+              <MenuItem fx:id="OptionsMenuServer" mnemonicParsing="false" text="Сервер" />
+                  <MenuItem fx:id="OptionsMenuClient" mnemonicParsing="false" text="Компьютер" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Button fx:id="DeleteButton" layoutX="14.0" layoutY="67.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="82.0" text="Удалить" />
+      <TableView fx:id="FilesView" layoutX="11.0" layoutY="104.0" prefHeight="290.0" prefWidth="574.0">
+        <columns>
+          <TableColumn fx:id="FilesTableNameColumn" prefWidth="200.0" text="Имя" />
+          <TableColumn fx:id="FilesTableTypeColumn" prefWidth="104.0" text="Тип" />
+            <TableColumn fx:id="FilesTableSizeColumn" prefWidth="123.0" text="Размер" />
+            <TableColumn fx:id="FilesTableDateColumn" prefWidth="146.0" text="Дата загрузки" />
+        </columns>
+      </TableView>
+      <Button fx:id="DownloadButton" layoutX="104.0" layoutY="67.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="102.0" text="Скачать" />
+      <TextField fx:id="findArea" layoutX="14.0" layoutY="35.0" prefHeight="25.0" prefWidth="472.0" />
+      <Button fx:id="FindFileButton" layoutX="493.0" layoutY="35.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" text="Поиск" />
+      <MenuButton fx:id="selectSort" layoutX="388.0" layoutY="67.0" mnemonicParsing="false" text="Сортировка">
+        <items>
+          <MenuItem fx:id="sortNameButton" mnemonicParsing="false" text="Имя" />
+          <MenuItem fx:id="sortTypeButton" mnemonicParsing="false" text="Тип" />
+            <MenuItem fx:id="sortSizeButton" mnemonicParsing="false" text="Размер" />
+            <MenuItem fx:id="sortDateButton" mnemonicParsing="false" text="Дата загрузки" />
+        </items>
+      </MenuButton>
+   </children>
+</AnchorPane>
